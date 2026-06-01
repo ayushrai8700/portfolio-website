@@ -1,573 +1,515 @@
 <!DOCTYPE html>
-<html class="scroll-smooth transition-colors duration-300" lang="en">
+<html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Shocrastic | Architecting India's Workforce Supply Chain</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=600;700;800&family=Inter:wght=400;500;700&family=JetBrains+Mono:wght=500&display=swap" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shocrastic | Enterprise Manpower & Workforce Solutions India</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     
-    <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                "on-secondary-container": "#636467",
-                "secondary-fixed-dim": "#c6c6c9",
-                "outline-variant": "#c0c9bf",
-                "on-primary-fixed": "#00210e",
-                "on-error": "#ffffff",
-                "primary-container": "#76ae86",
-                "surface-container": "#edeeef",
-                "on-tertiary": "#ffffff",
-                "background": "#f8f9fa",
-                "surface-tint": "#336946",
-                "on-error-container": "#93000a",
-                "primary-fixed-dim": "#9ad4a9",
-                "tertiary": "#565f6b",
-                "surface-container-high": "#e7e8e9",
-                "inverse-surface": "#2e3132",
-                "surface-bright": "#f8f9fa",
-                "on-primary-container": "#044123",
-                "secondary-fixed": "#e2e2e5",
-                "on-primary": "#ffffff",
-                "error": "#ba1a1a",
-                "charcoal-dark": "#0b1310", /* Tuned to match your premium brand dark scheme */
-                "tertiary-fixed": "#dae3f1",
-                "secondary": "#5d5e61",
-                "slate-border": "#D1D5DB",
-                "on-surface": "#191c1d",
-                "on-secondary": "#ffffff",
-                "on-surface-variant": "#414942",
-                "status-live": "#22C55E",
-                "secondary-container": "#e2e2e5",
-                "outline": "#717971",
-                "error-container": "#ffdad6",
-                "surface-container-low": "#f3f4f5",
-                "on-primary-fixed-variant": "#195130",
-                "inverse-on-surface": "#f0f1f2",
-                "on-secondary-fixed-variant": "#454749",
-                "surface-variant": "#e1e3e4",
-                "on-tertiary-fixed": "#131c26",
-                "on-tertiary-fixed-variant": "#3f4852",
-                "inverse-primary": "#9ad4a9",
-                "primary": "#336946",
-                "primary-fixed": "#b5f0c4",
-                "surface-container-highest": "#e1e3e4",
-                "sage-muted": "#E9F0EB",
-                "surface": "#f8f9fa",
-                "on-tertiary-container": "#303943",
-                "surface-dim": "#d9dadb",
-                "surface-container-lowest": "#ffffff",
-                "on-background": "#191c1d",
-                "on-secondary-fixed": "#1a1c1e",
-                "tertiary-container": "#99a2af",
-                "tertiary-fixed-dim": "#bec7d4",
-                "brand-primary": "#72a98f"
-            },
-            "borderRadius": {
-                "DEFAULT": "0.125rem",
-                "lg": "0.25rem",
-                "xl": "0.5rem",
-                "full": "0.75rem"
-            },
-            "spacing": {
-                "gutter": "24px",
-                "container-max": "1280px",
-                "margin-desktop": "64px",
-                "section-gap": "120px",
-                "unit": "4px",
-                "margin-mobile": "16px"
-            },
-            "fontFamily": {
-                "headline-md": ["Montserrat"],
-                "label-caps": ["Inter"],
-                "mono-label": ["JetBrains Mono"],
-                "display-lg": ["Montserrat"],
-                "headline-lg": ["Montserrat"],
-                "body-lg": ["Inter"],
-                "body-md": ["Inter"],
-                "headline-lg-mobile": ["Montserrat"]
-            },
-            "fontSize": {
-                "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
-                "label-caps": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "700"}],
-                "mono-label": ["13px", {"lineHeight": "1.2", "fontWeight": "500"}],
-                "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
-                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}]
-            }
-          },
-        },
-      }
-    </script>
     <style>
-        body { transition: background-color 0.3s ease, color 0.3s ease; }
-        .grid-pattern {
-            background-image: linear-gradient(to right, #D1D5DB 1px, transparent 1px),
-                              linear-gradient(to bottom, #D1D5DB 1px, transparent 1px);
-            background-size: 40px 40px;
-            opacity: 0.05;
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0b1310;
+            color: #f3f4f6;
+            overflow-x: hidden;
         }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.3s ease;
+        /* Custom Brand Color Definitions */
+        .text-brand { color: #72a98f; }
+        .bg-brand { background-color: #72a98f; }
+        .border-brand { border-color: #72a98f; }
+        .bg-brand-dark { background-color: #111e19; }
+        
+        #canvas-3d {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.6;
         }
-        .dark .glass-card {
-            background: rgba(17, 30, 25, 0.65);
+        .glassmorphism {
+            background: rgba(17, 30, 25, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(114, 169, 143, 0.15);
         }
-        .glass-dark {
-            background: rgba(18, 20, 22, 0.8);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(114, 169, 143, 0.15) 0%, transparent 70%);
         }
-        .dark .glass-dark {
-            background: rgba(11, 19, 16, 0.85);
-            border: 1px solid rgba(114, 169, 143, 0.2);
-        }
-        .parallax-3d {
-            transform-style: preserve-3d;
-            perspective: 1000px;
-        }
-        .hover-3d:hover {
-            transform: translateY(-10px) rotateX(5deg) rotateY(-5deg);
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .floating {
-            animation: floating 6s ease-in-out infinite;
-        }
-        @keyframes floating {
-            0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(2deg); }
-            100% { transform: translateY(0px) rotate(0deg); }
-        }
+        /* Lock viewports to ensure clean native mobile tap interaction */
         select, input, textarea {
-            font-size: 16px !important;
+            font-size: 16px !important; /* Prevents iOS auto-zoom on focus */
         }
     </style>
 </head>
-<body class="font-body-md bg-background text-on-surface dark:bg-charcoal-dark dark:text-inverse-on-surface selection:bg-primary-container selection:text-on-primary-container overflow-x: hidden">
+<body>
 
-<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-charcoal-dark/75 backdrop-blur-md border-b border-white/20 shadow-sm transition-colors duration-300">
-    <div class="flex justify-between items-center h-20 px-4 md:px-margin-desktop max-w-container-max mx-auto">
-        <div class="flex items-center gap-3">
-            <img alt="Shocrastic Logo" class="h-10 w-auto object-contain" src="https://i.postimg.cc/nrLchD57/logo-png-removebg-preview-(2).png" fetchpriority="high" loading="eager" decoding="sync"/>
-        </div>
-        
-        <div class="hidden lg:flex items-center gap-8">
-            <a class="text-primary dark:text-brand-primary font-bold border-b-2 border-primary dark:border-brand-primary font-body-md text-body-md py-1" href="#about">About Us</a>
-            <a class="text-on-surface-variant dark:text-gray-400 hover:text-primary dark:hover:text-brand-primary transition-colors font-body-md text-body-md" href="#solutions">Solutions</a>
-            <a class="text-on-surface-variant dark:text-gray-400 hover:text-primary dark:hover:text-brand-primary transition-colors font-body-md text-body-md" href="#ecosystem">Worker Ecosystem</a>
-            <a class="text-on-surface-variant dark:text-gray-400 hover:text-primary dark:hover:text-brand-primary transition-colors font-body-md text-body-md" href="#leadership">Leadership</a>
-        </div>
-        
-        <div class="flex items-center gap-4">
-            <button id="themeToggle" class="relative inline-flex h-9 w-16 shrink-0 cubic-bezier(0.4, 0, 0.2, 1) cursor-pointer rounded-full border-2 border-transparent bg-gray-200 dark:bg-brand-primary/20 transition-colors duration-300 focus:outline-none" aria-label="Toggle Theme Mode">
-                <span class="pointer-events-none absolute left-1 top-1 text-gray-400 dark:text-transparent transition-colors duration-300"><i class="fa-solid fa-sun text-sm"></i></span>
-                <span class="pointer-events-none absolute right-1.5 top-1 text-transparent dark:text-brand-primary transition-colors duration-300"><i class="fa-solid fa-moon text-sm"></i></span>
-                <span id="toggleHandle" class="pointer-events-none inline-block h-7 w-7 transform rounded-full bg-white dark:bg-brand-primary shadow-md ring-0 transition duration-300 ease-in-out translate-x-0 dark:translate-x-7 flex items-center justify-center">
-                    <i id="handleIcon" class="fa-solid fa-sun text-xs text-amber-500 dark:text-[#0b1310]"></i>
-                </span>
-            </button>
-            
-            <a href="#contact" class="bg-charcoal-dark dark:bg-brand-primary text-white dark:text-[#0b1310] px-6 py-2.5 rounded-lg font-bold hover:bg-primary dark:hover:opacity-90 transition-all active:scale-95 duration-200 text-sm md:text-base">
-                Contact Desk
-            </a>
-        </div>
-    </div>
-</nav>
+    <!-- 3D Background Canvas -->
+    <div id="canvas-3d"></div>
 
-<header class="relative min-h-screen flex items-center pt-20 overflow-hidden transition-all duration-300">
-    <div class="absolute inset-0 grid-pattern z-0 dark:opacity-10"></div>
-    <div class="absolute inset-0 bg-radial-gradient dark:bg-[radial-gradient(circle_at_50%_50%,rgba(114,169,143,0.15)_0%,transparent_70%)] opacity-0 dark:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-    
-    <div class="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-3/5 h-3/5 lg:h-4/5 z-0 opacity-20 dark:opacity-40 lg:opacity-100 transition-opacity duration-300">
-        <div class="relative w-full h-full parallax-3d flex items-center justify-center">
-            <img id="heroMap" class="w-4/5 h-4/5 object-contain filter drop-shadow-2xl transition-all duration-300" src="https://i.postimg.cc/nrLchD57/logo-png-removebg-preview-(2).png"/>
+    <!-- Navigation Header -->
+    <nav class="fixed top-0 left-0 w-full z-50 glassmorphism transition-all duration-300 py-4 px-4 md:px-12 flex justify-between items-center">
+        <a href="#" class="flex items-center gap-3 group">
+            <img src="https://i.postimg.cc/nrLchD57/logo-png-removebg-preview-(2).png" alt="Shocrastic Logo" class="h-10 md:h-11 w-auto object-contain group-hover:scale-105 transition-transform" fetchpriority="high" loading="eager" decoding="sync">
+        </a>
+        
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-8 font-medium">
+            <a href="#about" class="hover:text-brand transition-colors">About Us</a>
+            <a href="#solutions" class="hover:text-brand transition-colors">Solutions</a>
+            <a href="#ecosystem" class="hover:text-brand transition-colors">Worker Ecosystem</a>
+            <a href="#leadership" class="hover:text-brand transition-colors">Leadership</a>
+            <a href="#contact" class="bg-brand text-[#0b1310] font-semibold px-5 py-2.5 rounded-lg hover:bg-opacity-90 transition-all hover:shadow-[0_0_15px_rgba(114,169,143,0.4)]">Contact Desk</a>
         </div>
-    </div>
-    
-    <div class="relative z-10 px-4 md:px-margin-desktop max-w-container-max mx-auto w-full">
-        <div class="max-w-2xl mx-auto lg:mx-0">
-            <div class="inline-block px-4 py-1 bg-primary dark:bg-brand-primary text-white dark:text-[#0b1310] font-mono-label text-mono-label mb-6 uppercase tracking-widest font-bold">
-                Pan-India Manpower Infrastructure
-            </div>
-            <div class="glass-card p-6 md:p-10 rounded-xl relative overflow-hidden shadow-xl">
-                <h1 class="font-display-lg text-3xl sm:text-4xl md:text-[56px] mb-6 leading-tight dark:text-white">
-                    Architecting India's <br/>
-                    <span class="text-primary dark:text-brand-primary italic">Workforce Supply Chain</span>
-                </h1>
-                <p class="font-body-lg text-base md:text-lg text-secondary dark:text-gray-400 mb-10 max-w-lg leading-relaxed">
-                    Shocrastic bridges the structural gap between massive corporate operations and reliable blue-collar manpower. We handle discovery, vetting, and logistics so your production never stops.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#contact" class="bg-charcoal-dark dark:bg-brand-primary text-white dark:text-[#0b1310] px-8 py-4 rounded-lg font-bold flex items-center gap-3 hover:bg-primary transition-all text-center">
-                        Connect With Us <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                    </a>
-                    <a href="#ecosystem" class="border border-charcoal-dark dark:border-brand-primary/40 text-charcoal-dark dark:text-brand-primary px-8 py-4 rounded-lg font-bold hover:bg-charcoal-dark dark:hover:bg-brand-primary/10 hover:text-white transition-all text-center">
-                        Our Platform
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
 
-<section id="about" class="py-20 relative border-t border-gray-100 dark:border-white/5">
-    <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop">
-        <div class="mb-16 text-center max-w-3xl mx-auto">
-            <p class="font-label-caps text-label-caps text-primary dark:text-brand-primary mb-4 uppercase">Operational Mechanics</p>
-            <h2 class="font-headline-lg text-2xl md:text-4xl font-bold mb-6 dark:text-white">How Shocrastic Delivers Absolute Reliability</h2>
-            <p class="font-body-md text-sm md:text-base text-on-surface-variant dark:text-gray-400 leading-relaxed">We manage the entire legal lifecycle of workforce placement. We acquire localized talent through performance marketing and manage end-to-end integration.</p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <div class="glass-card p-8 md:p-12 rounded-xl group hover:border-primary dark:hover:border-brand-primary transition-colors shadow-sm">
-                <div class="w-14 h-14 bg-primary/10 dark:bg-brand-primary/10 text-primary dark:text-brand-primary flex items-center justify-center rounded-lg mb-6 group-hover:scale-110 transition-transform">
-                    <span class="material-symbols-outlined text-3xl">plumbing</span>
-                </div>
-                <h3 class="font-headline-md text-xl font-bold mb-4 dark:text-white">Zero Leakage Pipelines</h3>
-                <p class="font-body-md text-sm md:text-base text-secondary dark:text-gray-400 leading-relaxed">Active confirmation calls and multi-channel verification ensures workers arrive on site accurately ready for work, eliminating attrition before Day 1.</p>
-            </div>
-            
-            <div class="glass-card p-8 md:p-12 rounded-xl group hover:border-primary dark:hover:border-brand-primary transition-colors shadow-sm">
-                <div class="w-14 h-14 bg-primary/10 dark:bg-brand-primary/10 text-primary dark:text-brand-primary flex items-center justify-center rounded-lg mb-6 group-hover:scale-110 transition-transform">
-                    <span class="material-symbols-outlined text-3xl">verified_user</span>
-                </div>
-                <h3 class="font-headline-md text-xl font-bold mb-4 dark:text-white">Contract Execution Guarantee</h3>
-                <p class="font-body-md text-sm md:text-base text-secondary dark:text-gray-400 leading-relaxed">Our work finishes only once onboarding checkpoints are cleanly signed off by your site supervisors. We own the outcome, not just the lead.</p>
-            </div>
-        </div>
-        
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            <div class="border-l-4 border-primary dark:border-brand-primary pl-4 md:pl-6 py-2">
-                <div class="font-headline-lg text-2xl md:text-4xl font-extrabold text-charcoal-dark dark:text-white">100%</div>
-                <div class="font-label-caps text-[11px] md:text-xs text-secondary dark:text-gray-400 uppercase tracking-wider mt-1">Verified Native Workers</div>
-            </div>
-            <div class="border-l-4 border-primary dark:border-brand-primary pl-4 md:pl-6 py-2">
-                <div class="font-headline-lg text-2xl md:text-4xl font-extrabold text-charcoal-dark dark:text-white">Pan-India</div>
-                <div class="font-label-caps text-[11px] md:text-xs text-secondary dark:text-gray-400 uppercase tracking-wider mt-1">Multi-State Network</div>
-            </div>
-            <div class="border-l-4 border-primary dark:border-brand-primary pl-4 md:pl-6 py-2">
-                <div class="font-headline-lg text-2xl md:text-4xl font-extrabold text-charcoal-dark dark:text-white">End-to-End</div>
-                <div class="font-label-caps text-[11px] md:text-xs text-secondary dark:text-gray-400 uppercase tracking-wider mt-1">Onboarding Management</div>
-            </div>
-            <div class="border-l-4 border-primary dark:border-brand-primary pl-4 md:pl-6 py-2">
-                <div class="font-headline-lg text-2xl md:text-4xl font-extrabold text-charcoal-dark dark:text-white">B2B</div>
-                <div class="font-label-caps text-[11px] md:text-xs text-secondary dark:text-gray-400 uppercase tracking-wider mt-1">Flexible Enterprise Contracts</div>
-            </div>
-        </div>
-    </div>
-</section>
+        <!-- Mobile Menu Toggle -->
+        <button id="menu-btn" class="md:hidden text-white text-2xl p-2 focus:outline-none transition-transform active:scale-95" aria-label="Toggle Navigation Menu">
+            <i id="menu-icon" class="fa-solid fa-bars"></i>
+        </button>
 
-<section id="solutions" class="py-20 bg-gray-900 text-white relative overflow-hidden dark:bg-brand-primary/5 dark:border-y dark:border-white/5">
-    <div class="absolute inset-0 grid-pattern opacity-10"></div>
-    <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop relative z-10">
-        <div class="mb-12">
-            <p class="font-label-caps text-label-caps text-brand-primary mb-4 uppercase tracking-widest">Sectors We Service</p>
-            <h2 class="font-headline-lg text-2xl md:text-4xl font-bold text-white">Enterprise Scaled Capabilities</h2>
+        <!-- Mobile Nav Dropdown -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-[#0b1310]/95 backdrop-blur-xl border-b border-brand/20 flex flex-col px-6 py-6 gap-4 font-medium transition-all duration-300 shadow-2xl">
+            <a href="#about" class="hover:text-brand py-3 border-b border-white/5 text-lg">About Us</a>
+            <a href="#solutions" class="hover:text-brand py-3 border-b border-white/5 text-lg">Solutions</a>
+            <a href="#ecosystem" class="hover:text-brand py-3 border-b border-white/5 text-lg">Worker Ecosystem</a>
+            <a href="#leadership" class="hover:text-brand py-3 border-b border-white/5 text-lg">Leadership</a>
+            <a href="#contact" class="bg-brand text-[#0b1310] font-bold px-5 py-3.5 rounded-xl text-center mt-3 text-lg shadow-lg">Contact Desk</a>
         </div>
-        
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div class="group relative aspect-[3/4] overflow-hidden rounded-xl border border-white/10 hover-3d shadow-xl">
-                <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent z-10"></div>
-                <div class="absolute bottom-0 left-0 p-6 md:p-8 z-20">
-                    <span class="material-symbols-outlined text-brand-primary mb-4 text-4xl">inventory_2</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">Logistics & Warehousing</h3>
-                    <p class="font-body-md text-sm text-gray-300 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">Packing, sorting, picking, and complex hub operations.</p>
-                </div>
-            </div>
-            <div class="group relative aspect-[3/4] overflow-hidden rounded-xl border border-white/10 hover-3d shadow-xl">
-                <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent z-10"></div>
-                <div class="absolute bottom-0 left-0 p-6 md:p-8 z-20">
-                    <span class="material-symbols-outlined text-brand-primary mb-4 text-4xl">architecture</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">Infrastructure & Construction</h3>
-                    <p class="font-body-md text-sm text-gray-300 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">Vetted masonry technicians and safety-compliant ground crews.</p>
-                </div>
-            </div>
-            <div class="group relative aspect-[3/4] overflow-hidden rounded-xl border border-white/10 hover-3d shadow-xl">
-                <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent z-10"></div>
-                <div class="absolute bottom-0 left-0 p-6 md:p-8 z-20">
-                    <span class="material-symbols-outlined text-brand-primary mb-4 text-4xl">factory</span>
-                    <h3 class="font-headline-md text-xl font-bold mb-2">Manufacturing & Production</h3>
-                    <p class="font-body-md text-sm text-gray-300 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">Assembly engineers and heavy line production personnel pipelines.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </nav>
 
-<section id="ecosystem" class="py-20 overflow-hidden relative border-b border-gray-100 dark:border-white/5">
-    <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        <div class="relative order-2 lg:order-1">
-            <div class="absolute -inset-10 bg-primary/5 dark:bg-brand-primary/5 rounded-full blur-[80px] z-0"></div>
-            <div class="relative z-10 floating">
-                <div class="bg-gray-950 rounded-[3rem] p-4 shadow-2xl border-8 border-white/5 max-w-[300px] md:max-w-[320px] mx-auto">
-                    <div class="bg-surface dark:bg-zinc-900 rounded-[2.5rem] overflow-hidden h-[600px] md:h-[640px] flex flex-col">
-                        <div class="bg-primary dark:bg-brand-primary p-6 text-white dark:text-[#0b1310] pt-10">
-                            <p class="text-[10px] font-bold uppercase tracking-widest opacity-80 mb-1">Welcome back</p>
-                            <h4 class="font-bold text-lg">Bharat's Workforce</h4>
-                        </div>
-                        <div class="p-4 flex-1 space-y-4 overflow-y-auto">
-                            <div class="bg-white dark:bg-zinc-800 p-4 rounded-xl shadow-sm border border-slate-border/20 dark:border-white/5">
-                                <div class="flex justify-between items-center mb-2">
-                                    <span class="text-[10px] font-bold text-status-live bg-status-live/10 px-2 py-0.5 rounded-full">Live Contracts</span>
-                                    <span class="text-[10px] text-secondary dark:text-gray-400">142 Active</span>
-                                </div>
-                                <h5 class="font-bold text-sm dark:text-white">Automotive Plant Placement</h5>
-                                <p class="text-[10px] text-secondary dark:text-gray-400 flex items-center gap-1 mt-1"><span class="material-symbols-outlined text-[12px]">location_on</span> Pune, MH</p>
-                                <button type="button" class="mt-3 w-full bg-gray-950 dark:bg-brand-primary text-white dark:text-[#0b1310] text-[11px] py-2 rounded-lg font-bold">Apply Instantly</button>
-                            </div>
-                            <div class="bg-white dark:bg-zinc-800 p-4 rounded-xl shadow-sm border border-slate-border/20 dark:border-white/5 opacity-60">
-                                <h5 class="font-bold text-sm dark:text-white">Logistics Fulfillment Agent</h5>
-                                <p class="text-[10px] text-secondary dark:text-gray-400 flex items-center gap-1 mt-1"><span class="material-symbols-outlined text-[12px]">location_on</span> Gurugram, HR</p>
-                            </div>
-                        </div>
-                        <div class="bg-white dark:bg-zinc-800 border-t border-slate-border/10 dark:border-white/5 p-4 flex justify-around shrink-0">
-                            <span class="material-symbols-outlined text-primary dark:text-brand-primary" style="font-variation-settings: 'FILL' 1;">home</span>
-                            <span class="material-symbols-outlined text-secondary dark:text-gray-400">work</span>
-                            <span class="material-symbols-outlined text-secondary dark:text-gray-400">account_balance_wallet</span>
-                            <span class="material-symbols-outlined text-secondary dark:text-gray-400">person</span>
-                        </div>
-                    </div>
-                </div>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-28 pb-16 hero-gradient px-4 md:px-6 overflow-hidden">
+        <div class="max-w-6xl mx-auto text-center z-10" data-aos="fade-up" data-aos-duration="1000">
+            <div class="inline-flex items-center gap-2 bg-brand/10 border border-brand/30 px-4 py-1.5 rounded-full text-brand text-xs md:text-sm font-semibold mb-6 tracking-wide">
+                <i class="fa-solid fa-bolt-lightning text-xs"></i> PAN-INDIA MANPOWER INFRASTRUCTURE
             </div>
-        </div>
-        
-        <div class="order-1 lg:order-2 px-2">
-            <div class="inline-flex items-center gap-2 px-3 py-1 bg-sage-muted dark:bg-brand-primary/10 text-primary dark:text-brand-primary font-mono-label text-mono-label rounded mb-6 font-bold">
-                <span class="material-symbols-outlined text-sm animate-pulse">developer_mode</span>
-                Engineering In Progress
-            </div>
-            <h2 class="font-headline-lg text-2xl md:text-4xl font-bold mb-6 dark:text-white">Digital Decentralized Access for Bharat’s Workforce</h2>
-            <p class="font-body-lg text-base md:text-lg text-on-surface-variant dark:text-gray-300 mb-6 leading-relaxed">
-                Currently, our staffing functions via systematic localized media paired with high-touch human communication. To scale this infrastructure, we are natively coding the <span class="font-bold text-primary dark:text-brand-primary">Shocrastic Worker Ecosystem App</span>.
+            <h1 class="text-3xl sm:text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight md:leading-none mb-6 px-2">
+                Architecting India's <br><span class="text-brand">Workforce Supply Chain</span>
+            </h1>
+            <p class="text-gray-400 text-base md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed px-2">
+                Shocrastic bridges the structural gap between massive corporate operations and reliable blue-collar manpower. We handle the discovery, vetting, logistics, and seamless onboarding so your production never stops.
             </p>
-            <p class="font-body-md text-sm md:text-base text-secondary dark:text-gray-400 mb-8 leading-relaxed">
-                This digital product empowers workers directly across India to discover authenticated enterprise contracts, check travel alignments, and claim total economic control without middlemen interference.
-            </p>
-            <div class="flex items-center gap-4 md:gap-6">
-                <div class="w-12 h-12 bg-white dark:bg-zinc-800 rounded-lg flex items-center justify-center shadow-md shrink-0 border dark:border-white/5">
-                    <span class="material-symbols-outlined text-primary dark:text-brand-primary">shield</span>
-                </div>
-                <div>
-                    <p class="font-bold text-on-surface dark:text-white text-sm md:text-base">Alpha Architecture Testing Ongoing</p>
-                    <p class="text-xs md:text-sm text-secondary dark:text-gray-400 mt-0.5">Expected rollout Q3 2026</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="leadership" class="py-20 relative">
-    <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-4 flex justify-center">
-                <div class="relative w-64 h-64 md:w-72 md:h-72 rounded-full bg-gradient-to-tr from-primary to-emerald-800 p-1 shadow-2xl">
-                    <div class="w-full h-full rounded-full bg-surface dark:bg-[#111e19] flex items-center justify-center text-4xl md:text-5xl text-primary dark:text-brand-primary font-bold tracking-wider">
-                        AR
-                    </div>
-                </div>
-            </div>
-            <div class="lg:col-span-8 px-2">
-                <p class="font-label-caps text-label-caps text-primary dark:text-brand-primary mb-4 uppercase">Corporate Leadership</p>
-                <h2 class="font-headline-lg text-2xl md:text-4xl font-bold mb-6 dark:text-white">Built On Structural Integrity</h2>
-                <blockquote class="mb-8">
-                    <p class="font-headline-md text-lg md:text-2xl italic mb-6 text-on-surface-variant dark:text-gray-300 leading-relaxed">
-                        "At Shocrastic, our mandate extends beyond raw hiring setup. We are building a compliant operations framework where enterprise ecosystems gain efficiency, and localized workers secure career advancement milestones without structural vulnerabilities."
-                    </p>
-                    <footer class="flex items-center gap-4">
-                        <div class="w-12 h-[2px] bg-primary dark:bg-brand-primary"></div>
-                        <div>
-                            <p class="font-bold text-on-surface dark:text-white text-lg">Ayush Rai</p>
-                            <p class="text-xs md:text-sm text-secondary dark:text-gray-400">Founder & Executive Director</p>
-                        </div>
-                    </footer>
-                </blockquote>
-                <a target="_blank" class="inline-flex items-center gap-2 px-6 py-3 border border-slate-border dark:border-white/10 hover:bg-gray-950 dark:hover:bg-brand-primary hover:text-white dark:hover:text-[#0b1310] transition-all font-bold text-sm" href="https://www.linkedin.com/in/ayush-rai-44b4743a9/">
-                    <span class="material-symbols-outlined text-sm">link</span>
-                    Verified Corporate Principal Officer
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-sm sm:max-w-none mx-auto px-4">
+                <a href="#contact" class="w-full sm:w-auto bg-brand text-[#0b1310] text-lg font-bold px-8 py-4 rounded-xl hover:bg-opacity-90 transition-all text-center hover:shadow-[0_0_25px_rgba(114,169,143,0.5)] active:scale-[0.99]">
+                    Connect With Us
+                </a>
+                <a href="#ecosystem" class="w-full sm:w-auto border border-white/20 hover:border-brand/50 text-white font-medium px-8 py-4 rounded-xl transition-all flex items-center justify-center gap-2 text-center active:scale-[0.99]">
+                    Our Mobile Application <i class="fa-solid fa-arrow-right text-sm"></i>
                 </a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="contact" class="py-20 bg-gray-900 text-white dark:bg-charcoal-dark dark:border-t dark:border-white/5">
-    <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            <div class="lg:col-span-5 mb-8 lg:mb-0 px-2">
-                <h2 class="font-headline-lg text-2xl md:text-4xl font-bold mb-6 text-white">Partner With Shocrastic</h2>
-                <p class="font-body-lg text-sm md:text-base text-gray-400 mb-10 max-w-sm leading-relaxed">
-                    Whether you are an enterprise seeking stable workforce placement, an individual looking for a verified job, or a vendor supplying talent in volume—reach out directly.
+    <!-- Core Operational Value Section -->
+    <section id="about" class="py-20 md:py-24 px-4 md:px-12 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right" class="px-2">
+                <h2 class="text-xs font-bold tracking-widest text-brand uppercase mb-3">Operational Mechanics</h2>
+                <h3 class="text-2xl md:text-5xl font-bold text-white mb-6 leading-tight">How Shocrastic Delivers Absolute Reliability</h3>
+                <p class="text-gray-400 mb-8 text-sm md:text-base leading-relaxed">
+                    We don't just dump resumes or share contact lists. Shocrastic manages the entire legal lifecycle of workforce placement execution. We acquire localized talent through heavily targeted performance marketing ecosystems, ensure comprehensive communication, manage worker travel routes, and drop talent perfectly integrated right inside your project environments.
                 </p>
                 <div class="space-y-5">
-                    <div class="flex items-center gap-4">
-                        <div class="w-11 h-11 rounded-lg bg-white/5 flex items-center justify-center border border-white/10 shrink-0">
-                            <span class="material-symbols-outlined text-brand-primary">mail</span>
+                    <div class="flex gap-4 items-start">
+                        <div class="h-10 w-10 shrink-0 bg-brand/10 border border-brand/30 rounded-lg flex items-center justify-center text-brand">
+                            <i class="fa-solid fa-circle-check"></i>
                         </div>
-                        <p class="text-base md:text-xl font-medium break-all">shocrastic@gmail.com</p>
+                        <div>
+                            <h4 class="text-white font-semibold text-lg">Zero Leakage Pipelines</h4>
+                            <p class="text-gray-400 text-sm mt-0.5">Active confirmation calls ensure workers arrive on site accurately ready for work.</p>
+                        </div>
                     </div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-11 h-11 rounded-lg bg-white/5 flex items-center justify-center border border-white/10 shrink-0">
-                            <span class="material-symbols-outlined text-brand-primary">location_on</span>
+                    <div class="flex gap-4 items-start">
+                        <div class="h-10 w-10 shrink-0 bg-brand/10 border border-brand/30 rounded-lg flex items-center justify-center text-brand">
+                            <i class="fa-solid fa-shield-halved"></i>
                         </div>
-                        <p class="text-base md:text-xl font-medium">Uttam Nagar, Delhi, India</p>
+                        <div>
+                            <h4 class="text-white font-semibold text-lg">Contract Execution Guarantee</h4>
+                            <p class="text-gray-400 text-sm mt-0.5">Our work finishes only once onboarding checkpoints are cleanly signed off by your supervisors.</p>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <div class="lg:col-span-7">
-                <form id="shocrasticForm" action="https://api.web3forms.com/submit" method="POST" class="glass-dark p-6 md:p-10 rounded-xl grid grid-cols-1 md:grid-cols-2 gap-5 shadow-2xl mx-2 md:mx-0">
+            <div class="grid grid-cols-2 gap-4 px-2 md:px-0" data-aos="fade-left">
+                <div class="glassmorphism p-5 md:p-6 rounded-2xl flex flex-col justify-between h-40 md:h-48 transform hover:-translate-y-2 transition-transform">
+                    <div class="text-2xl md:text-3xl text-brand"><i class="fa-solid fa-users"></i></div>
+                    <div>
+                        <h4 class="text-2xl md:text-3xl font-extrabold text-white">100%</h4>
+                        <p class="text-gray-400 text-xs md:text-sm">Verified Native Field Workers</p>
+                    </div>
+                </div>
+                <div class="glassmorphism p-5 md:p-6 rounded-2xl flex flex-col justify-between h-40 md:h-48 transform hover:-translate-y-2 transition-transform mt-4 md:mt-6">
+                    <div class="text-2xl md:text-3xl text-brand"><i class="fa-solid fa-earth-asia"></i></div>
+                    <div>
+                        <h4 class="text-2xl md:text-3xl font-extrabold text-white">Pan-India</h4>
+                        <p class="text-gray-400 text-xs md:text-sm">Multi-State Sourcing Network</p>
+                    </div>
+                </div>
+                <div class="glassmorphism p-5 md:p-6 rounded-2xl flex flex-col justify-between h-40 md:h-48 transform hover:-translate-y-2 transition-transform">
+                    <div class="text-2xl md:text-3xl text-brand"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                    <div>
+                        <h4 class="text-2xl md:text-3xl font-extrabold text-white">End-to-End</h4>
+                        <p class="text-gray-400 text-xs md:text-sm">Onboarding Management</p>
+                    </div>
+                </div>
+                <div class="glassmorphism p-5 md:p-6 rounded-2xl flex flex-col justify-between h-40 md:h-48 transform hover:-translate-y-2 transition-transform mt-4 md:mt-6">
+                    <div class="text-2xl md:text-3xl text-brand"><i class="fa-solid fa-industry"></i></div>
+                    <div>
+                        <h4 class="text-2xl md:text-3xl font-extrabold text-white">B2B</h4>
+                        <p class="text-gray-400 text-xs md:text-sm">Flexible Enterprise Contracts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Marketplace Section -->
+    <section id="solutions" class="py-20 md:py-24 bg-brand-dark/40 border-y border-brand/10 px-4 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
+                <h2 class="text-xs font-bold tracking-widest text-brand uppercase mb-3">Sectors We Service</h2>
+                <h3 class="text-2xl md:text-5xl font-bold text-white">Enterprise Scaled Capabilities</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6 px-2 md:px-0">
+                <div class="glassmorphism p-6 md:p-8 rounded-2xl hover:border-brand/40 transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-xl text-brand mb-6">
+                        <i class="fa-solid fa-warehouse"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-3">Logistics & Warehousing</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Mass on-demand onboarding for packing, sorting, picking, and complex hub sorting operational staff.</p>
+                </div>
+                <div class="glassmorphism p-6 md:p-8 rounded-2xl hover:border-brand/40 transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-xl text-brand mb-6">
+                        <i class="fa-solid fa-helmet-safety"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-3">Infrastructure & Construction</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Vetted general laborers, master masonry technicians, and safety-compliant ground crews for major physical footprints.</p>
+                </div>
+                <div class="glassmorphism p-6 md:p-8 rounded-2xl hover:border-brand/40 transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-xl text-brand mb-6">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-3">Manufacturing & Production</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Assembly engineers, machine loaders, raw material handling support, and heavy line production personnel pipelines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Next Generation Worker App Ecosystem -->
+    <section id="ecosystem" class="py-20 md:py-24 px-4 md:px-12 max-w-7xl mx-auto">
+        <div class="glassmorphism rounded-3xl p-6 md:p-16 overflow-hidden relative mx-2 md:mx-0">
+            <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-brand/10 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="grid md:grid-cols-12 gap-12 items-center relative z-10">
+                <div class="md:col-span-7" data-aos="fade-right">
+                    <div class="bg-brand/20 text-brand border border-brand/30 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-md inline-block mb-4">
+                        Engineering In Progress
+                    </div>
+                    <h3 class="text-2xl md:text-5xl font-bold text-white mb-6 leading-tight">Digital Decentralized Access for Bharat’s Workforce</h3>
+                    <p class="text-gray-400 text-sm md:text-lg mb-6 leading-relaxed">
+                        Currently, our robust staffing functions via systematic localized media advertising paired with high-touch human communication protocols. To effortlessly scale this infrastructure, we are natively coding the **Shocrastic Worker Ecosystem App**. 
+                    </p>
+                    <p class="text-gray-400 text-sm mb-8 leading-relaxed">
+                        This digital product empowers workers directly across India to discover authenticated enterprise contracts, check travel alignments, verify joining milestones transparently, and claim total economic control without middlemen interference.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="flex -space-x-3">
+                            <span class="w-10 h-10 rounded-full bg-brand border-2 border-[#0b1310] flex items-center justify-center text-xs text-[#0b1310] font-bold"><i class="fa-solid fa-code"></i></span>
+                            <span class="w-10 h-10 rounded-full bg-emerald-700 border-2 border-[#0b1310] flex items-center justify-center text-xs font-bold text-white"><i class="fa-solid fa-mobile-screen"></i></span>
+                        </div>
+                        <span class="text-sm font-semibold text-white">Alpha Architecture Testing Ongoing</span>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-5 flex justify-center" data-aos="fade-left">
+                    <!-- Premium UI Container mimicking App Showcase -->
+                    <div class="w-60 md:w-64 h-[440px] md:h-[460px] bg-gradient-to-b from-[#111e19] to-[#0b1310] rounded-[36px] border-4 border-white/10 p-3 shadow-2xl relative">
+                        <div class="w-24 h-4 bg-white/10 mx-auto rounded-full mb-6 mt-1"></div>
+                        <div class="space-y-4 px-2">
+                            <div class="flex justify-between items-center bg-white/5 p-2 rounded-xl border border-white/5">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-3 h-3 rounded-full bg-brand"></div>
+                                    <span class="text-[10px] text-gray-400">Live Contracts</span>
+                                </div>
+                                <span class="text-[10px] bg-brand/20 text-brand px-1.5 py-0.5 rounded">142 Active</span>
+                            </div>
+                            <div class="h-28 bg-brand/10 border border-brand/20 rounded-xl p-3 flex flex-col justify-between">
+                                <div class="text-[11px] font-bold text-white">Automotive Plant Placement</div>
+                                <div class="text-[9px] text-gray-400"><i class="fa-solid fa-location-dot"></i> Pune, MH</div>
+                                <div class="w-full bg-brand text-[#0b1310] text-[10px] py-1 text-center font-bold rounded-md">Apply Instantly</div>
+                            </div>
+                            <div class="h-28 bg-white/5 rounded-xl p-3 flex flex-col justify-between opacity-50">
+                                <div class="text-[11px] font-bold text-white">Logistics Fulfillment Agent</div>
+                                <div class="text-[9px] text-gray-400"><i class="fa-solid fa-location-dot"></i> Gurugram, HR</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership / Trust Section -->
+    <section id="leadership" class="py-20 bg-brand-dark/20 px-4 md:px-12">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-xs font-bold tracking-widest text-brand uppercase mb-3">Corporate Leadership</h2>
+                <h3 class="text-2xl md:text-5xl font-bold text-white">Built On Structural Integrity</h3>
+            </div>
+            
+            <div class="glassmorphism rounded-3xl p-6 md:p-12 grid md:grid-cols-12 gap-8 items-center mx-2 md:mx-0" data-aos="fade-up">
+                <div class="md:col-span-4 flex flex-col items-center text-center">
+                    <div class="w-28 h-28 md:w-32 md:h-32 rounded-full bg-gradient-to-tr from-brand to-emerald-800 p-1 mb-4 shadow-xl">
+                        <div class="w-full h-full rounded-full bg-[#111e19] flex items-center justify-center text-3xl md:text-4xl text-brand font-bold">
+                            AR
+                        </div>
+                    </div>
+                    <h4 class="text-lg md:text-xl font-bold text-white">Ayush Rai</h4>
+                    <p class="text-brand text-xs font-medium tracking-wider uppercase mt-1">Founder & Executive Director</p>
+                </div>
+                
+                <div class="md:col-span-8 border-t md:border-t-0 md:border-l border-white/10 pt-6 md:pt-0 md:pl-8">
+                    <p class="text-gray-300 italic text-sm md:text-base leading-relaxed mb-6">
+                        "At Shocrastic, our mandate extends beyond raw hiring setup. We are building a compliant operations framework where enterprise ecosystems gain highly efficient workforce commitments, and native localized workers secure direct, authentic career advancement milestones without structural vulnerabilities."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <a href="https://www.linkedin.com/in/ayush-rai-44b4743a9/" target="_blank" class="text-gray-400 hover:text-brand text-xl transition-colors p-1" aria-label="LinkedIn Profile">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <span class="text-xs text-gray-500">Verified Corporate Principal Officer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Intake Forms -->
+    <section id="contact" class="py-20 px-4 md:px-12 border-t border-brand/10 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-12 gap-12">
+            <div class="md:col-span-5 px-2" data-aos="fade-right">
+                <h2 class="text-xs font-bold tracking-widest text-brand uppercase mb-3">Communications Gate</h2>
+                <h3 class="text-2xl md:text-5xl font-bold text-white mb-6">Partner With Shocrastic</h3>
+                <p class="text-gray-400 mb-8 text-sm md:text-base leading-relaxed">
+                    Whether you are an enterprise seeking stable workforce placement, an individual looking for a verified job, or a vendor supplying talent in volume—reach out directly.
+                </p>
+                <div class="space-y-4 text-sm">
+                    <div class="flex items-center gap-3 text-gray-300">
+                        <i class="fa-solid fa-envelope text-brand w-5 text-center"></i> shocrastic@gmail.com
+                    </div>
+                    <div class="flex items-center gap-3 text-gray-300">
+                        <i class="fa-solid fa-location-dot text-brand w-5 text-center"></i> Uttam Nagar, Delhi, India
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:col-span-7 glassmorphism p-5 md:p-8 rounded-3xl mx-2 md:mx-0" data-aos="fade-left">
+                <!-- Web3Forms Secure API Integration Gateway -->
+                <form id="shocrasticForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
                     <input type="hidden" name="access_key" value="cf500e96-4f63-448d-a4c8-c8fe9cc5cb84">
                     <input type="hidden" name="subject" value="New Inquiry Received via Shocrastic Web Desk">
                     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-                    <div class="md:col-span-2">
-                        <label class="block font-label-caps text-xs text-gray-400 uppercase tracking-wider mb-2">I am contacting as a: <span class="text-red-500 font-bold">*</span></label>
-                        <select id="userRole" name="Inquiry_Type" required class="w-full bg-white/5 border border-white/20 rounded px-4 py-3.5 text-brand-primary font-semibold focus:border-brand-primary outline-none transition-colors cursor-pointer text-sm">
-                            <option value="Enterprise Client" class="bg-neutral-900 text-white">Enterprise Company (Looking for Manpower)</option>
-                            <option value="Individual Worker" class="bg-neutral-900 text-white">Individual Worker (Looking for a Job)</option>
-                            <option value="Bulk Supplier" class="bg-neutral-900 text-white">Bulk Manpower Supplier / Vendor Partner</option>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">I am contacting as a: <span class="text-red-500 font-bold">*</span></label>
+                        <select id="userRole" name="Inquiry_Type" required class="w-full bg-[#0b1310] border border-white/10 rounded-xl px-4 py-3.5 text-brand font-semibold focus:outline-none focus:border-brand text-sm transition-colors cursor-pointer">
+                            <option value="Enterprise Client">Enterprise Company (Looking for Manpower)</option>
+                            <option value="Individual Worker">Individual Worker (Looking for a Job)</option>
+                            <option value="Bulk Supplier">Bulk Manpower Supplier / Vendor Partner</option>
                         </select>
                     </div>
-                    
+
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label id="nameLabel" class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Company Name <span class="text-red-500 font-bold">*</span></label>
+                            <input type="text" name="Name_or_Company" required class="w-full bg-[#0b1310] border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-brand text-sm transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Contact Email Address <span class="text-red-500 font-bold">*</span></label>
+                            <input type="email" name="Email" required class="w-full bg-[#0b1310] border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-brand text-sm transition-colors">
+                        </div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Phone Number / WhatsApp <span class="text-red-500 font-bold">*</span></label>
+                            <input type="tel" name="Phone" required class="w-full bg-[#0b1310] border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-brand text-sm transition-colors">
+                        </div>
+                        <div>
+                            <label id="metricLabel" class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Estimated Workforce Count Needed <span class="text-red-500 font-bold">*</span></label>
+                            <input type="text" name="Workforce_Volume_or_Details" placeholder="e.g. 150 workers, My Skillset, etc." required class="w-full bg-[#0b1310] border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-brand text-sm transition-colors">
+                        </div>
+                    </div>
+
                     <div>
-                        <label id="nameLabel" class="block font-label-caps text-xs text-gray-400 uppercase tracking-wider mb-2">Company Name <span class="text-red-500 font-bold">*</span></label>
-                        <input name="Name_or_Company" required class="w-full bg-white/5 border border-white/20 rounded px-4 py-3.5 text-white focus:border-brand-primary outline-none transition-colors text-sm" type="text"/>
+                        <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Project Scope or Message Details (Optional)</label>
+                        <textarea name="Message_Details" rows="4" placeholder="Describe requirements, skill capabilities, locations, or timing..." class="w-full bg-[#0b1310] border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-brand text-sm transition-colors"></textarea>
                     </div>
-                    <div>
-                        <label class="block font-label-caps text-xs text-gray-400 uppercase tracking-wider mb-2">Contact Email Address <span class="text-red-500 font-bold">*</span></label>
-                        <input name="Email" required class="w-full bg-white/5 border border-white/20 rounded px-4 py-3.5 text-white focus:border-brand-primary outline-none transition-colors text-sm" type="email"/>
-                    </div>
-                    <div>
-                        <label class="block font-label-caps text-xs text-gray-400 uppercase tracking-wider mb-2">Phone / WhatsApp <span class="text-red-500 font-bold">*</span></label>
-                        <input name="Phone" required class="w-full bg-white/5 border border-white/20 rounded px-4 py-3.5 text-white focus:border-brand-primary outline-none transition-colors text-sm" type="tel"/>
-                    </div>
-                    <div>
-                        <label id="metricLabel" class="block font-label-caps text-xs text-gray-400 uppercase tracking-wider mb-2">Estimated Workforce Count Needed <span class="text-red-500 font-bold">*</span></label>
-                        <input name="Workforce_Volume_or_Details" placeholder="e.g. 150 workers" required class="w-full bg-white/5 border border-white/20 rounded px-4 py-3.5 text-white focus:border-brand-primary outline-none transition-colors text-sm" type="text"/>
-                    </div>
-                    <div class="md:col-span-2">
-                        <label class="block font-label-caps text-xs text-gray-400 uppercase tracking-wider mb-2">Project Scope or Message Details (Optional)</label>
-                        <textarea name="Message_Details" placeholder="Describe requirements, location context, or skill types..." class="w-full bg-white/5 border border-white/20 rounded px-4 py-3.5 text-white focus:border-brand-primary outline-none transition-colors text-sm" rows="4"></textarea>
-                    </div>
-                    <div class="md:col-span-2 mt-2">
-                        <button class="w-full bg-primary dark:bg-brand-primary text-white dark:text-[#0b1310] font-bold py-4 rounded hover:bg-opacity-90 transition-all uppercase tracking-widest text-sm active:scale-[0.99]" type="submit">
-                            Submit
-                        </button>
-                    </div>
+
+                    <button type="submit" class="w-full bg-brand text-[#0b1310] text-sm font-bold py-4 rounded-xl hover:bg-opacity-90 transition-all uppercase tracking-wider shadow-md active:scale-[0.99]">
+                        Submit
+                    </button>
                 </form>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer class="bg-gray-950 border-t border-gray-800 dark:bg-neutral-950 w-full py-12 transition-colors duration-300">
-    <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop grid grid-cols-12 gap-8 md:gap-gutter">
-        <div class="col-span-12 lg:col-span-4 mb-6 lg:mb-0">
-            <div class="flex items-center gap-3 mb-6">
-                <img alt="Logo" class="h-10 w-auto" src="https://i.postimg.cc/nrLchD57/logo-png-removebg-preview-(2).png"/>
+    <!-- Footer -->
+    <footer class="py-8 px-4 border-t border-white/5 bg-[#070c0a] text-center text-xs text-gray-500">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-6">
+            <div class="flex flex-col sm:flex-row items-center gap-3">
+                <img src="https://i.postimg.cc/nrLchD57/logo-png-removebg-preview-(2).png" alt="Shocrastic Logo" class="h-7 w-auto opacity-80">
+                <span>&copy; 2026 Shocrastic Inc. All Enterprise Rights Reserved.</span>
             </div>
-            <p class="text-gray-400 max-w-xs mb-4 text-sm leading-relaxed">
-                Modernizing India's workforce infrastructure with technical precision and architectural reliability.
-            </p>
-        </div>
-        
-        <div class="col-span-6 lg:col-span-2">
-            <h5 class="font-label-caps text-xs font-bold text-gray-300 mb-4 uppercase tracking-wider">Company</h5>
-            <ul class="space-y-3 text-sm">
-                <li><a class="text-gray-400 hover:text-brand-primary transition-colors" href="#about">About Us</a></li>
-                <li><a class="text-gray-400 hover:text-brand-primary transition-colors" href="#solutions">Solutions</a></li>
-                <li><a class="text-gray-400 hover:text-brand-primary transition-colors" href="#contact">Contact Us</a></li>
-            </ul>
-        </div>
-        
-        <div class="col-span-6 lg:col-span-2">
-            <h5 class="font-label-caps text-xs font-bold text-gray-300 mb-4 uppercase tracking-wider">Legal</h5>
-            <ul class="space-y-3 text-sm">
-                <li><a class="text-gray-400 hover:text-brand-primary transition-colors" href="#">Terms of Service</a></li>
-                <li><a class="text-gray-400 hover:text-brand-primary transition-colors" href="#">Privacy Policy</a></li>
-                <li><a class="text-gray-400 hover:text-brand-primary transition-colors" href="#">Compliance</a></li>
-            </ul>
-        </div>
-        
-        <div class="col-span-12 lg:col-span-4">
-            <h5 class="font-label-caps text-xs font-bold text-gray-300 mb-4 uppercase tracking-wider">Operational Hub</h5>
-            <p class="text-sm text-gray-400 mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-sm text-brand-primary">location_on</span> Uttam Nagar, Delhi, India</p>
-            <p class="text-sm text-gray-400 flex items-center gap-2"><span class="material-symbols-outlined text-sm text-brand-primary">mail</span> shocrastic@gmail.com</p>
-        </div>
-        
-        <div class="col-span-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 mt-6">
-            <p class="text-gray-500 text-xs tracking-wide">
-                © 2026 Shocrastic Inc. Workforce Supply Chain Infrastructure. All rights reserved.
-            </p>
             <div class="flex gap-6">
-                <a class="text-gray-400 hover:text-brand-primary text-xl transition-all" href="https://www.linkedin.com/in/ayush-rai-44b4743a9/">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
+                <a href="#about" class="hover:text-gray-300 py-1">About</a>
+                <a href="#solutions" class="hover:text-gray-300 py-1">Solutions</a>
+                <a href="#contact" class="hover:text-gray-300 py-1">Privacy Policy</a>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<script>
-    // 💡 High-End Dark / Light Slider Toggle Engine
-    const htmlEl = document.documentElement;
-    const themeToggleBtn = document.getElementById('themeToggle');
-    const toggleHandle = document.getElementById('toggleHandle');
-    const handleIcon = document.getElementById('handleIcon');
+    <!-- Three.js Library CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- AOS Implementation -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
+    <script>
+        // Dynamic Frontend Form Label Multi-Intake Swapping Setup
+        const roleSelect = document.getElementById('userRole');
+        const nameLabel = document.getElementById('nameLabel');
+        const metricLabel = document.getElementById('metricLabel');
 
-    themeToggleBtn.addEventListener('click', () => {
-        htmlEl.classList.toggle('dark');
+        roleSelect.addEventListener('change', (e) => {
+            const val = e.target.value;
+            if (val === "Enterprise Client") {
+                nameLabel.innerHTML = 'Company Name <span class="text-red-500 font-bold">*</span>';
+                metricLabel.innerHTML = 'Estimated Workforce Count Needed <span class="text-red-500 font-bold">*</span>';
+            } else if (val === "Individual Worker") {
+                nameLabel.innerHTML = 'Your Full Name <span class="text-red-500 font-bold">*</span>';
+                metricLabel.innerHTML = 'Your Core Profession / Skill <span class="text-red-500 font-bold">*</span>';
+            } else if (val === "Bulk Supplier") {
+                nameLabel.innerHTML = 'Agency / Supplier Name <span class="text-red-500 font-bold">*</span>';
+                metricLabel.innerHTML = 'Total Available Worker Volume <span class="text-red-500 font-bold">*</span>';
+            }
+        });
+
+        // Initialize Scroll Animations
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out-quad'
+        });
+
+        // Mobile Menu Interactivity Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
         
-        if (htmlEl.classList.contains('dark')) {
-            // Dark Mode Sliding Configuration
-            toggleHandle.style.transform = 'translateX(28px)';
-            handleIcon.className = "fa-solid fa-moon text-xs text-[#0b1310]";
-        } else {
-            // Light Mode Sliding Configuration
-            toggleHandle.style.transform = 'translateX(0px)';
-            handleIcon.className = "fa-solid fa-sun text-xs text-amber-500";
-        }
-    });
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Toggle menu icons between bars and close X marks cleanly
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = "fa-solid fa-bars";
+            } else {
+                menuIcon.className = "fa-solid fa-xmark";
+            }
+        });
+        
+        // Auto-collapse layout menu after user targets an section link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = "fa-solid fa-bars";
+            });
+        });
 
-    // Dynamic Form Label Switcher (Enterprise vs Individual vs Bulk)
-    const roleSelect = document.getElementById('userRole');
-    const nameLabel = document.getElementById('nameLabel');
-    const metricLabel = document.getElementById('metricLabel');
+        // 3D Background Mesh - Responsive Three.js Implementation
+        const container = document.getElementById('canvas-3d');
+        const scene = new THREE.Scene();
+        
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 50;
 
-    roleSelect.addEventListener('change', (e) => {
-        const val = e.target.value;
-        if (val === "Enterprise Client") {
-            nameLabel.innerHTML = 'Company Name <span class="text-red-500 font-bold">*</span>';
-            metricLabel.innerHTML = 'Estimated Workforce Count Needed <span class="text-red-500 font-bold">*</span>';
-        } else if (val === "Individual Worker") {
-            nameLabel.innerHTML = 'Your Full Name <span class="text-red-500 font-bold">*</span>';
-            metricLabel.innerHTML = 'Your Core Profession / Skill <span class="text-red-500 font-bold">*</span>';
-        } else if (val === "Bulk Supplier") {
-            nameLabel.innerHTML = 'Agency / Supplier Name <span class="text-red-500 font-bold">*</span>';
-            metricLabel.innerHTML = 'Total Available Worker Volume <span class="text-red-500 font-bold">*</span>';
-        }
-    });
+        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        container.appendChild(renderer.domElement);
 
-    // Clean mouse parallax calculation for hero visual
-    document.addEventListener('mousemove', (e) => {
-        const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
-        const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
-        const mapImage = document.getElementById('heroMap');
-        if(mapImage) {
-            mapImage.style.transform = `translateX(${moveX}px) translateY(${moveY}px) scale(1.03)`;
+        const geometry = new THREE.BufferGeometry();
+        
+        // Scale back particle density calculation on smaller mobile screens for performance optimization
+        const isMobile = window.innerWidth < 768;
+        const verticesCnt = isMobile ? 45 : 90;
+        const posArray = new Float32Array(verticesCnt * 3);
+
+        for(let i=0; i < verticesCnt * 3; i++) {
+            posArray[i] = (Math.random() - 0.5) * 120;
         }
-    });
-</script>
+
+        geometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+        const material = new THREE.PointsMaterial({
+            size: isMobile ? 0.8 : 0.6, // Slightly wider nodes for touch screens
+            color: 0x72a98f,
+            transparent: true,
+            opacity: 0.8
+        });
+
+        const particleMesh = new THREE.Points(geometry, material);
+        scene.add(particleMesh);
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        let mouseX = 0;
+        let mouseY = 0;
+        
+        // Interactive tracking handles desktop hover moves and mobile tap events fluidly
+        const handleMove = (x, y) => {
+            mouseX = (x - window.innerWidth / 2) * 0.05;
+            mouseY = (y - window.innerHeight / 2) * 0.05;
+        };
+
+        window.addEventListener('mousemove', (e) => handleMove(e.clientX, e.clientY));
+        window.addEventListener('touchmove', (e) => {
+            if(e.touches.length > 0) {
+                handleMove(e.touches[0].clientX, e.touches[0].clientY);
+            }
+        }, { passive: true });
+
+        const clock = new THREE.Clock();
+
+        const animate = () => {
+            const elapsedTime = clock.getElapsedTime();
+            
+            particleMesh.rotation.y = elapsedTime * 0.03;
+            particleMesh.rotation.x = elapsedTime * 0.01;
+
+            particleMesh.position.x += (mouseX - particleMesh.position.x) * 0.05;
+            particleMesh.position.y += (-mouseY - particleMesh.position.y) * 0.05;
+
+            renderer.render(scene, camera);
+            requestAnimationFrame(animate);
+        };
+
+        animate();
+    </script>
 </body>
 </html>
